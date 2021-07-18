@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pg1-R7-vtN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--メモ一覧-->
+        <scene sceneID="5hb-sR-aNm">
+            <objects>
+                <viewController id="V7i-RW-NRN" customClass="MainViewController" customModule="CloudMemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rnP-EP-TuD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pa2-Qw-ItP">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iU9-Qp-ipO">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iU9-Qp-ipO" id="nBy-5o-yyl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XkO-zy-tXJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="メモ一覧" id="oCo-CR-GX0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TPk-ie-VSr">
+                            <connections>
+                                <segue destination="CEN-HS-Jss" kind="show" identifier="toAddMemo" id="wKv-Bf-l3W"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="YoN-p3-Rab" kind="show" identifier="toDetail" id="Vfb-JF-RNV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8e8-MY-imS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844.92753623188412" y="193.52678571428569"/>
+        </scene>
+        <!--詳細-->
+        <scene sceneID="Ikz-pg-M7P">
+            <objects>
+                <viewController id="YoN-p3-Rab" customClass="DetailViewController" customModule="CloudMemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i7r-nK-gaz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="l1v-hd-SXe">
+                                <rect key="frame" x="20" y="139" width="374" height="391"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6p-Ou-UqU">
+                                <rect key="frame" x="44" y="585" width="326" height="56"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="wtj-h4-6G6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="更新">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="390-hE-nst"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W6p-Ou-UqU" firstAttribute="centerX" secondItem="l1v-hd-SXe" secondAttribute="centerX" id="FMg-WI-IZD"/>
+                            <constraint firstItem="l1v-hd-SXe" firstAttribute="leading" secondItem="i7r-nK-gaz" secondAttribute="leadingMargin" id="K1h-fd-2wB"/>
+                            <constraint firstItem="W6p-Ou-UqU" firstAttribute="centerX" secondItem="i7r-nK-gaz" secondAttribute="centerX" id="Ojf-JA-lBh"/>
+                            <constraint firstItem="W6p-Ou-UqU" firstAttribute="leading" secondItem="390-hE-nst" secondAttribute="leading" constant="44" id="TAm-Ah-AYw"/>
+                            <constraint firstItem="W6p-Ou-UqU" firstAttribute="top" secondItem="l1v-hd-SXe" secondAttribute="bottom" constant="55" id="gIs-ND-nHh"/>
+                            <constraint firstItem="390-hE-nst" firstAttribute="bottom" secondItem="W6p-Ou-UqU" secondAttribute="bottom" constant="221" id="gjB-IG-HmT"/>
+                            <constraint firstItem="l1v-hd-SXe" firstAttribute="top" secondItem="390-hE-nst" secondAttribute="top" constant="51" id="mLl-JP-cCw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="詳細" id="HVr-Zl-IFI">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="3ah-7E-SEC"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osT-4l-WRI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.9420289855075" y="655.58035714285711"/>
+        </scene>
+        <!--追加-->
+        <scene sceneID="rwD-ll-lFS">
+            <objects>
+                <viewController id="CEN-HS-Jss" customClass="AddMemoViewController" customModule="CloudMemoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="anE-J6-pmp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pqJ-mQ-JA6">
+                                <rect key="frame" x="20" y="123" width="374" height="378"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97L-uq-58A">
+                                <rect key="frame" x="44" y="546" width="326" height="56"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="OT2-pq-DT2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jS2-no-hGP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="97L-uq-58A" firstAttribute="centerX" secondItem="anE-J6-pmp" secondAttribute="centerX" id="0xb-If-y8E"/>
+                            <constraint firstItem="pqJ-mQ-JA6" firstAttribute="leading" secondItem="anE-J6-pmp" secondAttribute="leadingMargin" id="3Rr-6S-8an"/>
+                            <constraint firstItem="97L-uq-58A" firstAttribute="leading" secondItem="jS2-no-hGP" secondAttribute="leading" constant="44" id="9Gy-1I-wMa"/>
+                            <constraint firstItem="97L-uq-58A" firstAttribute="top" secondItem="pqJ-mQ-JA6" secondAttribute="bottom" constant="45" id="9o7-lv-gVS"/>
+                            <constraint firstItem="97L-uq-58A" firstAttribute="centerX" secondItem="pqJ-mQ-JA6" secondAttribute="centerX" id="Cpt-LN-0Bv"/>
+                            <constraint firstItem="pqJ-mQ-JA6" firstAttribute="top" secondItem="jS2-no-hGP" secondAttribute="top" constant="35" id="ja4-dh-aM1"/>
+                            <constraint firstItem="jS2-no-hGP" firstAttribute="bottom" secondItem="97L-uq-58A" secondAttribute="bottom" constant="260" id="wPJ-T2-ZtR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="追加" id="o31-iw-20b"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycc-mJ-mYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915.9420289855075" y="-155.35714285714286"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ch6-Wa-2fu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pg1-R7-vtN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fcA-P6-cnm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="V7i-RW-NRN" kind="relationship" relationship="rootViewController" id="bcg-ox-9BY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkv-i5-2Hq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65.217391304347828" y="193.52678571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

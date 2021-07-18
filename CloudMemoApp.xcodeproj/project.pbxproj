@@ -3,27 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3B3B177C26A461CA00448DAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B177B26A461CA00448DAB /* AppDelegate.swift */; };
 		3B3B177E26A461CA00448DAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B177D26A461CA00448DAB /* SceneDelegate.swift */; };
-		3B3B178026A461CA00448DAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B177F26A461CA00448DAB /* ViewController.swift */; };
 		3B3B178326A461CA00448DAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3B178126A461CA00448DAB /* Main.storyboard */; };
 		3B3B178526A461CD00448DAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B3B178426A461CD00448DAB /* Assets.xcassets */; };
 		3B3B178826A461CD00448DAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B3B178626A461CD00448DAB /* LaunchScreen.storyboard */; };
+		3B3B179126A46B6800448DAB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B179026A46B6800448DAB /* MainViewController.swift */; };
+		3B3B179326A46B7500448DAB /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B179226A46B7500448DAB /* AddMemoViewController.swift */; };
+		3B3B179526A46B8000448DAB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B3B179426A46B8000448DAB /* DetailViewController.swift */; };
+		E8CC9706FD1234E0CBB1E00F /* Pods_CloudMemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF7B373E67B1331450BF318 /* Pods_CloudMemoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		045A3596CF55518AE6D7D389 /* Pods-CloudMemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudMemoApp.release.xcconfig"; path = "Target Support Files/Pods-CloudMemoApp/Pods-CloudMemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		3B3B177826A461CA00448DAB /* CloudMemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudMemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B3B177B26A461CA00448DAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3B3B177D26A461CA00448DAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3B3B177F26A461CA00448DAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B3B178226A461CA00448DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B3B178426A461CD00448DAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B3B178726A461CD00448DAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B3B178926A461CD00448DAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B3B179026A46B6800448DAB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3B3B179226A46B7500448DAB /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		3B3B179426A46B8000448DAB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9CF7B373E67B1331450BF318 /* Pods_CloudMemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CloudMemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B65C11BE494C750D99933D39 /* Pods-CloudMemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CloudMemoApp.debug.xcconfig"; path = "Target Support Files/Pods-CloudMemoApp/Pods-CloudMemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8CC9706FD1234E0CBB1E00F /* Pods_CloudMemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17B0A22538080487AC7A2338 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CF7B373E67B1331450BF318 /* Pods_CloudMemoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3B3B176F26A461CA00448DAB = {
 			isa = PBXGroup;
 			children = (
 				3B3B177A26A461CA00448DAB /* CloudMemoApp */,
 				3B3B177926A461CA00448DAB /* Products */,
+				BB42E6227A767C5609DA9023 /* Pods */,
+				17B0A22538080487AC7A2338 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +75,34 @@
 		3B3B177A26A461CA00448DAB /* CloudMemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				3B3B178F26A469F100448DAB /* VC */,
 				3B3B177B26A461CA00448DAB /* AppDelegate.swift */,
 				3B3B177D26A461CA00448DAB /* SceneDelegate.swift */,
-				3B3B177F26A461CA00448DAB /* ViewController.swift */,
-				3B3B178126A461CA00448DAB /* Main.storyboard */,
 				3B3B178426A461CD00448DAB /* Assets.xcassets */,
 				3B3B178626A461CD00448DAB /* LaunchScreen.storyboard */,
 				3B3B178926A461CD00448DAB /* Info.plist */,
 			);
 			path = CloudMemoApp;
+			sourceTree = "<group>";
+		};
+		3B3B178F26A469F100448DAB /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				3B3B179026A46B6800448DAB /* MainViewController.swift */,
+				3B3B179226A46B7500448DAB /* AddMemoViewController.swift */,
+				3B3B179426A46B8000448DAB /* DetailViewController.swift */,
+				3B3B178126A461CA00448DAB /* Main.storyboard */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		BB42E6227A767C5609DA9023 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B65C11BE494C750D99933D39 /* Pods-CloudMemoApp.debug.xcconfig */,
+				045A3596CF55518AE6D7D389 /* Pods-CloudMemoApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B3B178C26A461CD00448DAB /* Build configuration list for PBXNativeTarget "CloudMemoApp" */;
 			buildPhases = (
+				C4169F28221D64AE9A2C6197 /* [CP] Check Pods Manifest.lock */,
 				3B3B177426A461CA00448DAB /* Sources */,
 				3B3B177526A461CA00448DAB /* Frameworks */,
 				3B3B177626A461CA00448DAB /* Resources */,
+				A888AB29420731FDE68F45C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +172,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A888AB29420731FDE68F45C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloudMemoApp/Pods-CloudMemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CloudMemoApp/Pods-CloudMemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CloudMemoApp/Pods-CloudMemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C4169F28221D64AE9A2C6197 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CloudMemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3B3B177426A461CA00448DAB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B3B178026A461CA00448DAB /* ViewController.swift in Sources */,
+				3B3B179326A46B7500448DAB /* AddMemoViewController.swift in Sources */,
+				3B3B179126A46B6800448DAB /* MainViewController.swift in Sources */,
+				3B3B179526A46B8000448DAB /* DetailViewController.swift in Sources */,
 				3B3B177C26A461CA00448DAB /* AppDelegate.swift in Sources */,
 				3B3B177E26A461CA00448DAB /* SceneDelegate.swift in Sources */,
 			);
@@ -283,6 +367,7 @@
 		};
 		3B3B178D26A461CD00448DAB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B65C11BE494C750D99933D39 /* Pods-CloudMemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +387,7 @@
 		};
 		3B3B178E26A461CD00448DAB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 045A3596CF55518AE6D7D389 /* Pods-CloudMemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
