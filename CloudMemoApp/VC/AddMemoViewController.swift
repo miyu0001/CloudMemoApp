@@ -9,9 +9,13 @@ import UIKit
 
 class AddMemoViewController: UIViewController {
 
+    @IBOutlet weak var memoTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+    @IBAction func save(_ sender: Any) {
+        
+    }
 }

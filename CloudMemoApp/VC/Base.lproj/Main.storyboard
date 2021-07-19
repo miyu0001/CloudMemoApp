@@ -122,6 +122,9 @@
                                 <state key="normal" title="保存">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="save:" destination="CEN-HS-Jss" eventType="touchUpInside" id="Fp4-JP-bKX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jS2-no-hGP"/>
@@ -137,6 +140,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="追加" id="o31-iw-20b"/>
+                    <connections>
+                        <outlet property="memoTextView" destination="pqJ-mQ-JA6" id="LHP-pQ-Ty2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycc-mJ-mYk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
