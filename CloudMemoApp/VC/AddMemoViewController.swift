@@ -14,6 +14,11 @@ class AddMemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //他のところをタッチしたキーボードが下がる
+        let tapGR: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGR.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tapGR)
 
     }
 
@@ -35,5 +40,10 @@ class AddMemoViewController: UIViewController {
                 self.present(alertController, animated: true, completion: nil)
             }
         })
+    }
+    
+    //キーボード下げる関数
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
     }
 }

@@ -76,6 +76,9 @@
                                 <state key="normal" title="更新">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="update:" destination="YoN-p3-Rab" eventType="touchUpInside" id="acU-e0-74U"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="390-hE-nst"/>
@@ -91,8 +94,15 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="詳細" id="HVr-Zl-IFI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="3ah-7E-SEC"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="3ah-7E-SEC">
+                            <connections>
+                                <action selector="deleteMemo:" destination="YoN-p3-Rab" id="AWV-3D-laU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="memoTextView" destination="l1v-hd-SXe" id="yNU-HZ-7q5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osT-4l-WRI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

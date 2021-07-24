@@ -38,6 +38,25 @@ class MainViewController: UIViewController ,UITableViewDelegate,UITableViewDataS
         return cell
     }
     
+    //セルが押された時の処理(どのセルが押されたか判別する関数）
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //詳細画面に遷移
+        performSegue(withIdentifier: "toDetail", sender: nil)
+        //セルを押した後にグレーになるのを解除
+        listTableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    //詳細画面に値渡し
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            //次の画面の取得(DetailViewControllerx)
+            let detailViewController = segue.destination as! DetailViewController
+            //セルの中で何が選ばれているのか
+            let selecrtedIndex = listTableView.indexPathForSelectedRow!
+            detailViewController.selectedMemo = memoArray[selecrtedIndex.row]
+        }
+    }
+    
     //データの読み込み
     func loadMemo(){
         let query = NCMBQuery(className: "Memo")
